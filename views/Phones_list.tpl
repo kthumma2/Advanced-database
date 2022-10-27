@@ -1,20 +1,20 @@
 <html>
 <body>
-<h2> List of Phones </h2>
+<h2>Phones List</h2>
 <hr/>
 <table>
 % for item in Phones_list:
- <tr>
-<td> {{str(item['desc'])}} </td>
-<td> <a href="/edit/{{str(item['id'])}}">Edit</a> </td>
-<td> <a href="/delete/{{str(item['id'])}}">Delete</a> </td>
- </tr>
+  <tr>
+    <td>{{str(item['description'])}}</td>
+    <td><a href="/edit/{{str(item['id'])}}">edit</a></td>
+    <td><a href="/delete/{{str(item['id'])}}">delete</a></td>
+  </tr>
 % end
 </table>
 <hr/>
-<form action = "/add" method ="post">
-   <p> Add new Phone : <input name = "description"/></p>
-   <p><button type ="submit"> Submit </button>
+<form action="/add" method="post">
+  <p>New item: <input name="description"/></p>
+  <p><button type="submit">Submit</button>
 </form>
 </body>
 </html>
