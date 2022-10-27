@@ -1,6 +1,6 @@
 from bottle import default_app, route, get, post, template, request, redirect
 
-from dataset_database import get_items, add_item, delete_item, update_item
+from peewee_database import get_items, add_item, delete_item, update_item
 
 @route('/')
 def get_index():
